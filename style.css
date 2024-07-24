@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --ff-main : "Overpass", sans-serif;
+    --fs-main:0.938rem; /* 15px */
+    --clr-orange : hsl(25, 98%, 53%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(217, 12%, 63%);
+    --clr-primary-100: hsl(213, 19%, 18%);
+    --clr-primary-150: hsl(213, 19%,25%);
+    --clr-primary-200: hsl(216, 12%, 8%);
+
+    --space-100 : 1.563rem; /* 25px */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-main);
+    font-size: var(--fs-main);
+    color: var(--clr-neutral-100);
+}
+
+main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--clr-primary-200);
+}
+
+.rating-card {
+    background-image: linear-gradient(to bottom, hsl(214, 20%, 15%), hsl(212, 25%, 12%));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin: 0 1.563rem; /* 25px */
+    border-radius: 1.25rem; /* 20px */
+    padding: 1.25rem 1.5rem; /* 20px */
+    display: flex;
+    flex-direction: column;
+    gap: 1.563rem; /* 25px */
+    max-width: 20rem; /* 320px */
+}
+
+.rating-card h2 {
+    word-spacing: 0.094rem; /* 1.5px */
+}
+
+.star-img {
+    background-color: var(--clr-primary-150);
+    border-radius: 50%;
+    padding: 0.625rem; /* 10px */
+    width: 2.5rem; /* 40px */
+    height: auto;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.star-img:hover {
+    transform: rotate(180deg);
+}
+
+.rating-card p {
+    font-weight: 200;
+    color: var(--clr-neutral-200);
+    word-spacing: 0.11rem; /* 4px */
+  
+}
+
+.rating-card ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-card ul li a {
+    background-color: var(--clr-primary-150);
+    color: var(--clr-neutral-200);
+    font-weight: 700;
+    text-decoration: none; 
+    border-radius: 50%; 
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.rating-card ul li a:hover {
+    background-color: var(--clr-orange);
+    color: var(--clr-primary-200);
+}
+
+.active {
+    background-color: var(--clr-neutral-100)  !important;
+    color: var(--clr-primary-200) !important;
+}
+
+/* utility */
+.btn-submit {
+    cursor: pointer;
+    width: 100%;
+    padding: 0.625rem; /* 10px */
+    border-radius: 1.875rem; /* 30px */
+    display: block;
+    border: 0;
+    background-color: var(--clr-orange);
+    color: var(--clr-primary-200);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.5s ease, color 0.5s ease; 
+}
+
+.btn-submit:hover {
+    background-color: var(--clr-neutral-100)  !important;
+    color: var(--clr-primary-200) !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.card-ty {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.938rem; /* 15px */
+}
+
+.card-ty img {
+    width: 9.375rem; /* 150px */
+    height: auto;
+}
+
+.card-ty span {
+    background-color: var(--clr-primary-150);
+    color: var(--clr-orange);
+    padding: 0.3125rem 0.9375rem; /* 5px 15px */
+    border-radius: 1.875rem; /* 30px */
+    margin: 1.25rem 0; /* 20px 0 */
+}
